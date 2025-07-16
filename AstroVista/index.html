@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstroVista - NASA Astronomy Picture of the Day</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="AstroVista - NASA Picture of the Day" />
+  <meta property="og:description" content="Explore the cosmos with NASA's Astronomy Picture of the Day on AstroVista." />
+  <meta property="og:image" content="https://apod.nasa.gov/apod/image/2406/SomeExample.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header>
+    <h1>AstroVista</h1>
+    <div class="tooltip-wrapper">
+  <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+  <div class="custom-tooltip">
+    <span id="tooltipText">Switch to Dark Mode</span>
+    <span class="tooltip-arrow"></span>
+  </div>
+</div>
+
+  </header>
+
+  <main class="container" role="main" aria-live="polite">
+    <section class="hero" aria-label="Astronomy Picture of the Day selection">
+      <h2>Explore NASA’s Astronomy Picture of the Day</h2>
+      <p>Select a date to see the space wonder captured by NASA</p>
+      <div class="controls">
+        <input type="date" id="dateInput" aria-label="Select date for APOD" max="" />
+        <button id="getPicBtn">Get Picture</button>
+      </div>
+    </section>
+
+    <section id="apodCard" aria-label="Astronomy Picture of the Day content" tabindex="0">
+      <h3 id="apodTitle"></h3>
+      <p id="apodDate"></p>
+
+      <img id="apodImage" alt="Astronomy Picture" style="display:none" />
+      <iframe id="apodVideo" frameborder="0" allowfullscreen style="display:none"></iframe>
+
+      <p id="apodExplanation"></p>
+      <div id="apodActions">
+        <a id="downloadBtn" href="#" role="button" download>Download Image</a>
+        <button id="favBtn" aria-label="Save to favorites">⭐ Save to Favorites</button>
+        <button id="shareBtn" aria-label="Share this image">🔗 Share</button>
+      </div>
+    </section>
+
+    <div id="loader" aria-label="Loading" role="status" style="display:none">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+
+    <section id="favoritesSection" aria-label="Favorites gallery">
+  <h3>Favorites Gallery</h3>
+
+  <div class="favorites-wrapper">
+    <div id="favoritesGrid"></div>
+  </div>
+
+  <p id="noFavoritesMsg" class="no-favorites-msg">No favorites saved yet.</p>
+</section>
+
+
+    <div id="error" role="alert"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
