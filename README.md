@@ -1,17 +1,4 @@
-# API-INTEGRATIN-ASTROVISTA
-"COMPANY": CODTECH IT SOLUTIONS
-
-"NAME": DIVYA TAK
-
-"INTERN ID": CT08DN804
-
-"DOMAIN": FULL STACK DEVELOPMENT
-
-"DURATION": 8 WEEK
-
-"MENTOR": NEELA SANTOSH
-
-# 🌌 AstroVista
+# 🌌 AstroVista - API INTEGRATION 
 AstroVista is a responsive web application that displays the **Astronomy Picture of the Day (APOD)** using NASA's public API. Built as part of my internship project, AstroVista not only integrates real-time space content but also offers a sleek, modern interface with enhanced user experience.
 
 ## 🚀 Features
